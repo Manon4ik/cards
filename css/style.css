@@ -1,0 +1,255 @@
+body {
+	font: 14px/1.5 "Times New Roman", "Arial", sans-serif;
+	font-weight: 400;
+	background: #f3f3f3;
+}
+p.zna4 {
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	font-size: 8px;
+	font-weight: bold;
+}
+.ba-container{
+	width: 1080px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.header-main {
+	background: orange;
+	border-radius: 7px;
+	padding: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+header h2 {
+	font-size: 32px;
+	font-weight: bold;
+	color: darkblue;
+}
+.card_shablon {
+	display: inline-block;
+	position: relative;
+	width: 75px;
+	height: 100px;
+	border: 1px solid #000;
+	border-radius: 5px;
+	padding: 5px 0;
+	box-shadow: 2px 2px 2px rgba(20, 20, 20, 0.30);
+}
+.card_shablon:hover {
+	cursor: pointer;
+}
+.pole_mast {
+	position: relative;
+	width: 50px;
+	height: 85px;
+	margin: auto;
+}
+.mast_red {
+	color: red;
+}
+.mast_black {
+	color: #000;
+}
+.mast_green {
+	color: green;
+}
+.mast_blue {
+	color: blue;
+}
+.zna4_mast {
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 25px;
+	width: 10px;
+}
+.zna4_rotate_180{
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	height: 25px;
+	width: 10px;
+	transform: rotate(180deg);
+}
+.pole_mast_size {
+	font-size: 24px;
+	line-height: 14px;
+}
+.pos_lt {
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.pos_rt {
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.pos_lb {
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	bottom: 2px;
+}
+.pos_rb {
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	bottom: 2px;
+}
+.pos_mid {
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	width: 14px;
+	height: 14px;
+	margin:auto;
+}
+.pos_mid_tp {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	width: 14px;
+	height: 14px;
+	margin:auto;
+}
+.pos_mid_bt {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	width: 14px;
+	height: 14px;
+	margin:auto;
+}
+.pos_mid_ace {
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	height: 14px;
+	margin:auto;
+	font-size: 40px;
+}
+
+.pole_50_up {
+	position: relative;
+	height: 50%;
+}
+.pole_66_up {
+	position: relative;
+	height: 60%;
+}
+.pole_33_up {
+	position: relative;
+	height: 40%;
+}
+.mast_rotate_180 {
+	transform: rotate(180deg);
+}
+.mast_size {
+	display: inline-block;
+	position: absolute;
+	font-size: 10px;
+	top:6px;
+	left: 2px;
+}
+.pole_img {
+	width: 100%;
+	height: 100%;
+	border: 1px solid #000;
+}
+.pole_mast_img {
+	position: relative;
+	width: 55px;
+	height: 100%;
+	margin: auto;
+}
+.j_q_k {
+	display: inline-block;
+	position: absolute;
+	top: 9px;
+	bottom: 0;
+	right:0;
+	left: 0;
+/*	width: 100%;*/
+	font-size: 68px;
+	line-height: 68px;
+	/*font-weight: bold;*/
+	margin: auto;
+}
+.pole_img .pos_lt {
+	left: 2px;
+	top: 2px;
+}
+
+
+.back_img {
+	background: url('../img/card2.png') 50% 50% no-repeat;
+	background-size: cover;
+}
+/*------------------------Animation------------------------------*/
+/*WAS TAKEN FROM
+http://webformyself.com/sozdajte-animaciyu-perevorota-v-css/*/
+/* весь контейнер поддерживает перспективу */
+.flip-container {
+	display: inline-block;
+/*	perspective: 1000;*/
+}
+/* переверните сторону при проведении мышью */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+	transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+
+	width: 75px;
+	height: 100px;
+}
+
+/* здесь находится скорость перевертывания */
+.flipper {
+	transition: .5s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+/* скройте обратную сторону во время переворота */
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+}
+
+/* лицевая сторона размещена над обратной */
+.front {
+	z-index: 2;
+	position: relative;
+	/*background-color: #fff;*/
+	transition: .7s ease-in-out;
+}
+
+/* обратная, изначально скрытая сторона */
+.back {
+	transform: rotateY(180deg);
+}
+
+
